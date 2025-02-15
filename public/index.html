@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Retell Client SDK Test</title>
+</head>
+<body>
+  <h1>Retell Client SDK Test</h1>
+  <!-- Add a test element for your integration -->
+  <div class="agent_ai" style="cursor:pointer; padding:10px; background:#eee;">Click to test SDK</div>
+  <!-- Load the bundled SDK -->
+  <script src="/retell-sdk.min.js"></script>
+  <script>
+    // Check if the SDK is loaded and exposed globally
+    console.log("window.RetellWebClient:", window.RetellWebClient);
+    if (window.RetellWebClient) {
+      document.body.insertAdjacentHTML('beforeend', '<p>Retell Client SDK loaded successfully.</p>');
+    } else {
+      document.body.insertAdjacentHTML('beforeend', '<p>Error: Retell Client SDK failed to load.</p>');
+    }
+  </script>
+</body>
+</html>

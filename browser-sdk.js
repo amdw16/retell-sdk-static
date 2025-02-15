@@ -1,4 +1,3 @@
-// Import the Retell client SDK for browsers
-import { RetellWebClient } from 'retell-client-js-sdk';
-// Expose the Retell Web Client globally so it can be accessed as window.RetellWebClient
-window.RetellWebClient = RetellWebClient;
+import * as RetellClient from 'retell-client-js-sdk';
+window.RetellWebClient = RetellClient.RetellWebClient || RetellClient;
+console.log("Inside bundle, RetellWebClient =", window.RetellWebClient);
